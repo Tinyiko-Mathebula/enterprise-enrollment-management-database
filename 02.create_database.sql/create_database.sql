@@ -1,0 +1,2 @@
+CREATE DATABASE enterprise_enrollment_management;
+USE enterprise_enrollment_management;

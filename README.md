@@ -89,5 +89,8 @@ enterprise-enrollment-management-database/
 
 ## Author
 
-Junior SQL & MySQL Database Administration portfolio project demonstrating enterprise-level relational modeling and database integrity management.
+Tinyiko Patience Mathebula  
+Junior SQL / MySQL Database Administrator  
+GitHub: https://github.com/Tinyiko-Mathebula
+
 

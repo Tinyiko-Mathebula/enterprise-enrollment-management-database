@@ -1,182 +1,93 @@
-:
+# Enterprise Enrollment Management Database (MySQL)
 
+## Overview
 
+This project demonstrates hands-on MySQL Database Administration and relational database design for an enterprise-style enrollment system.
 
-### Enterprise Enrollment Management Database
+The system manages participant enrollments, program data, and enrollment statuses while enforcing strict data integrity, referential integrity, and performance optimization principles.
 
+---
 
+## DBA Responsibilities Demonstrated
 
-A relational database system built using MySQL to manage program enrollments with enforced data integrity, business rules, and performance optimization.
+This project simulates real-world MySQL DBA tasks including:
 
+• Designing normalized schemas using DDL statements  
+• Implementing primary and foreign key constraints  
+• Enforcing referential integrity  
+• Preventing duplicate records using composite unique constraints  
+• Modeling many-to-many relationships using junction tables  
+• Creating indexes for performance optimization  
+• Writing optimized JOIN and aggregation queries  
+• Managing schema structure and business rules at database level  
 
+---
 
-##### Project Overview
+## Database Architecture
 
+### Tables
 
+- `persons` – Participant records
+- `programs` – Program catalog
+- `statuses` – Enrollment status lookup table
+- `enrollments` – Junction table linking persons and programs
 
-This project demonstrates professional database design and implementation for managing:
+### Relationships
 
+• One-to-many: persons → enrollments  
+• One-to-many: programs → enrollments  
+• Many-to-many resolved through enrollments  
+• Status enforcement through foreign key reference  
 
+Duplicate enrollments are prevented using a composite unique constraint.
 
-People enrolling in programs
+---
 
+## Performance & Optimization
 
+• Indexed foreign key columns  
+• Optimized JOIN queries for reporting  
+• Structured schema for scalability  
+• Designed to maintain high data consistency and integrity  
 
-Program details and schedules
+---
 
+## Example Administrative Queries
 
+• View full enrollment report with status  
+• Count enrollments per program  
+• Identify active participants  
+• Aggregate enrollment metrics  
 
-Enrollment statuses
+---
 
-
-
-Business rule enforcement
-
-
-
-The database follows normalization principles and resolves many-to-many relationships using a junction table.
-
-
-
-##### Database Structure
-
-
-
-The system consists of four main tables:
-
-
-
-persons – Stores participant information
-
-
-
-programs – Stores available programs
-
-
-
-statuses – Lookup table for enrollment states
-
-
-
-enrollments – Links persons to programs
-
-
-
-###### Key relationships:
-
-
-
-One person can have multiple enrollments
-
-
-
-One program can have multiple participants
-
-
-
-Each enrollment has one status
-
-
-
-Duplicate enrollments are prevented using a composite unique constraint
-
-
-
-##### Entity Relationship (ER) Diagram
-
-
-
-Below is the logical ER diagram of the database design:
-
-
-
-###### Technical Features
-
-
-
-Primary and foreign key constraints
-
-
-
-Many-to-many relationship modeling
-
-
-
-Composite unique constraint to prevent duplicate enrollments
-
-
-
-Indexed foreign keys for performance
-
-
-
-Reporting queries using joins and aggregation
-
-
-
-##### Repository Structure
+## Repository Structure
 
 enterprise-enrollment-management-database/
 
+├── schema/ → DDL table creation scripts  
+├── data/ → Sample data inserts  
+├── constraints/ → Business rule enforcement  
+├── indexes/ → Performance tuning scripts  
+├── queries/ → Reporting & validation queries  
+├── er_diagram.png  
+└── README.md  
 
+---
 
-&nbsp;─ schema/        → Table creation scripts
+## Skills Demonstrated
 
-&nbsp;─ data/          → Sample data inserts
+• MySQL Database Administration fundamentals  
+• Schema design and DDL management  
+• Referential integrity enforcement  
+• Query optimization  
+• Performance indexing  
+• Relational modeling  
+• Business rule enforcement  
 
-&nbsp;─ constraints/   → Business rules
+---
 
-&nbsp;─ indexes/       → Performance indexes
+## Author
 
-&nbsp;─ queries/       → Reporting queries
-
-&nbsp;─ er\_diagram.png → ER diagram image 
-
-&nbsp;─ README.md
-
-##### Example Reporting Capabilities
-
-
-
-View all enrollments with status
-
-
-
-Count enrollments per program
-
-
-
-Filter active participants
-
-
-
-##### Skills Demonstrated
-
-
-
-Relational database design
-
-
-
-SQL schema implementation
-
-
-
-Data integrity enforcement
-
-
-
-Performance optimization
-
-
-
-Business logic at database level
-
-
-
-##### Author
-
-
-
-Database design and implementation project demonstrating enterprise-level relational modeling and SQL development.
+Junior SQL & MySQL Database Administration portfolio project demonstrating enterprise-level relational modeling and database integrity management.
 
